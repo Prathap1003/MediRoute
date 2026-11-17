@@ -13,6 +13,14 @@ app.get("/", (req, res) => {
     res.send("Welcome to MediRoute Backend!");
 });
 
+// Health Check API
+app.get("/api/health", (req, res) => {
+    res.json({
+        status: "success",
+        message: "MediRoute API is working!"
+    });
+});
+
 // Start server
 const PORT = process.env.PORT || 5000;
 
